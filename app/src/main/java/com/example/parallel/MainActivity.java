@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
 
     private ActivityMainBinding binding;
-    private List<Person> personList;
+    private List<Person2> personList;
+    private List<Pet> petList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,33 +26,42 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         init();
+        initpet();
+        PetsAdapter petsAdapter=new PetsAdapter(petList);
         PersonAdapter adapter = new PersonAdapter(personList);
-        binding.recycle.setAdapter(adapter);
+
+        binding.rvPets.setAdapter(petsAdapter);
+        binding.rvPerson.setAdapter(adapter);
 
     }
     public void init(){
         personList = new ArrayList<>();
-        personList.add(new Person(12 , "Imya" , "Telephone" , "Type" , "Cl"));
-        personList.add(new Person(53 , "Pave" , "13" , "1ty" , "pi"));
-        personList.add(new Person(34 , "Gen" , "14" , "2ty" , "mo"));
-        personList.add(new Person(15 , "Ole" , "15" , "3ty" , "fas"));
-        personList.add(new Person(16 , "Iva" , "16" , "4ty" , "she"));
-        personList.add(new Person(49 , "Kir" , "17" , "5ty" , "ipo"));
-        personList.add(new Person(45, "Pet" , "18" , "6ty" , "so"));
-        personList.add(new Person(43, "Vas", "19" , "7ty" , "ri"));
-        personList.add(new Person(44, "Lev" , "20" , "8ty" , "sl"));
-        personList.add(new Person(47, "Kol" , "31" , "9ty" , "dob"));
-        personList.add(new Person(50 , "Eg" , "32" , "10ty" , "mal"));
+        personList.add(new Person2(01 , "name" ,"tel"));
+        personList.add(new Person2(1 , "E1" , "t1"));
+        personList.add(new Person2(2 , "E2" , "t2"));
+        personList.add(new Person2(3 , "F3" , "t3"));
+        personList.add(new Person2(4 , "F4" , "t4"));
+        personList.add(new Person2(5 , "E5" , "t5"));
+        personList.add(new Person2(6 , "F6" , "t6"));
+        personList.add(new Person2(7 , "F7" , "t7"));
+        personList.add(new Person2(8 , "E8" , "t8"));
+        personList.add(new Person2(9 , "E9" , "t9"));
+        personList.add(new Person2(0 , "E0" , "t0"));
     }
-    /*personList.add(new Person(123 , "Imya" , "Telephone" , "Type" , "Clichka"));
-        personList.add(new Person(53 , "Pavel" , "123" , "dolmotinets" , "pitno"));
-        personList.add(new Person(34 , "Genadi" , "124" , "zhihuahua" , "monster"));
-        personList.add(new Person(15 , "Oleg" , "125" , "ovcharka" , "fashist"));
-        personList.add(new Person(16 , "Ivan" , "126" , "delterer" , "sherst"));
-        personList.add(new Person(49 , "Kirill" , "127" , "sibu" , "iponec"));
-        personList.add(new Person(45, "Petr" , "128" , "taksa" , "sosiska"));
-        personList.add(new Person(43, "Vasili" , "129" , "korgi" , "rigii"));
-        personList.add(new Person(44, "Lev" , "130" , "pudel" , "sluni"));
-        personList.add(new Person(47, "Kolya" , "131" , "buldog" , "dobryk"));
-        personList.add(new Person(50 , "Egor" , "132" , "alabay" , "malish"));*/
+    public void initpet(){
+        petList=new ArrayList<>();
+        petList.add(new Pet(01 , "type" , "name"));
+        petList.add(new Pet(1 , "si" , "a"));
+        petList.add(new Pet(2 , "si" , "b"));
+        petList.add(new Pet(3 , "si" , "c"));
+        petList.add(new Pet(4 , "si" , "d"));
+        petList.add(new Pet(5 , "si" , "e"));
+        petList.add(new Pet(6 , "si" , "f"));
+        petList.add(new Pet(6 , "si" , "g"));
+        petList.add(new Pet(7 , "si" , "h"));
+        petList.add(new Pet(8 , "si" , "k"));
+        petList.add(new Pet(9 , "si" , "c"));
+        petList.add(new Pet(7 , "si" , "c"));
+    }
+
 }

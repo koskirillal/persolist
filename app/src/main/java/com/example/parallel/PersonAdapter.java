@@ -11,8 +11,8 @@ import com.example.parallel.databinding.PersonlayoutBinding;
 import java.util.List;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonViewHolder> {
-    private List<Person> personList;
-    public PersonAdapter(List<Person> personList){
+    private List<Person2> personList;
+    public PersonAdapter(List<Person2> personList){
         this.personList=personList;
     }
 

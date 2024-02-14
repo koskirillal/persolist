@@ -14,12 +14,12 @@ public class PersonViewHolder extends RecyclerView.ViewHolder {
         this.binding = binding;
     }
 
-    public void bind(Person item){
-        binding.fullname.setText(item.getFullname());
-        binding.id.setText(String.valueOf(item.getId()));
-        binding.petsname.setText(item.getPetsname());
-        binding.type.setText(item.getPettype());
-        binding.telephone.setText(item.getTelephone());
+    public void bind(Person2 item){
+        /*binding.id.setText(String.valueOf(item.getId()));*/
+        binding.fullname.setText(item.getFullname()+" ");
+        binding.id.setText(String.valueOf(item.getId()) + " ");
+
+        binding.telephone.setText(item.getTelephone() + "\n");
 
     }
 
